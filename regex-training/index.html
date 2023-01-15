@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var regex = /\w+/g;
+
+        console.log("aa bbb cccc ddddd eeeeee fffffff".match(regex), ['aa', 'bbb', 'cccc', 'ddddd', 'eeeeee', 'fffffff']);
+        console.log("aaa bcccd".match(regex), ['aaa']);
+        console.log("_x_x_ --- ~~|~~".match(regex), ['_x_x_']);
+        console.log("ABCDCBA ABABABA".match(regex), ['ABCDCBA', 'ABABABA']);
+        console.log("121 1221 13577531 11211".match(regex), ['121', '1221', '11211']);
+        console.log("aabbbcccc d".match(regex), null);
+        console.log("abbA CdDc".match(regex), null);
+        console.log("1    1".match(regex), null);
+        console.log("1231 12341 123451 1234561".match(regex), null);
+    </script>
+</body>
+
+</html>

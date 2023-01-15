@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function century(year) {
+            return Math.ceil(year / 100);
+        }
+
+        console.log(century(1705), 18, 'Testing for year 1705');
+        console.log(century(1900), 19, 'Testing for year 1900');
+        console.log(century(1601), 17, 'Testing for year 1601');
+        console.log(century(2000), 20, 'Testing for year 2000');
+        console.log(century(89), 1, 'Testing for year 89');
+    </script>
+</body>
+
+</html>

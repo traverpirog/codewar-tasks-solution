@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function duplicateCount(text) {
+            const object = text.toLowerCase().split('').reduce((acc, n) => (acc[n] = (acc[n] || 0) + 1, acc), {});
+            let counter = 0;
+            for (const key in object) {
+                object[key] > 1 ? counter++ : counter;
+            }
+            return counter
+        }
+
+        console.log(duplicateCount("")); // 0
+        console.log(duplicateCount("abcde")); // 0
+        console.log(duplicateCount("aabbcde")); // 2
+        console.log(duplicateCount("aabBcde")); // 2
+        console.log(duplicateCount("Indivisibility")); // 1
+        console.log(duplicateCount("Indivisibilities")); // 2
+    </script>
+</body>
+
+</html>
